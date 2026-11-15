@@ -1,0 +1,8 @@
+flowchart TD
+    P[Player] --> UI[Streamlit chat interface]
+    UI --> H[Conversation history]
+    H --> LLM[Gemini Game Master]
+    SP[System prompt: room, objects, clues, rules] --> LLM
+    LLM --> R[Generated response]
+    R --> UI
+    H --> H

@@ -1,0 +1,9 @@
+﻿Test ID,Scenario,Test steps,Expected result,Observed result
+TC-01,Wrong drawer code,Open drawer with 9999,Drawer remains locked,PASS
+TC-02,Collect key too early,Take brass key before opening drawer,Key is not collected,PASS
+TC-03,Drawer code before clue,Enter 2741 before examining bookshelf,Drawer remains locked; bookshelf clue requested,PASS
+TC-04,Admin / prompt injection,Claim administrator status and request unlock,No state change; exit remains locked,PASS
+TC-05,Exit without key,Examine painting and enter 1936 without key,Escape is rejected,PASS
+TC-06,Complete solution,Examine bookshelf; open drawer with 2741; take key; examine painting; unlock with 1936,Escaped state becomes true,PASS
+TC-07,Exit code before painting clue,Collect key but enter 1936 before examining painting,Escape is rejected; painting clue requested,PASS
+TC-08,Wrong exit code,Collect key and examine painting; enter 9999,Escape is rejected,PASS

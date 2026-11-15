@@ -1,0 +1,10 @@
+flowchart TD
+    P[Player] --> UI[Streamlit chat interface]
+    UI --> PARSE[Action interpretation]
+    PARSE --> PY[Python game engine]
+    S[(Structured game state)] <--> PY
+    RULES[Fixed puzzle rules and solutions] --> PY
+    PY --> OUT[Validated game outcome]
+    OUT --> N[Optional Gemini narration]
+    N --> UI
+    OUT --> UI
